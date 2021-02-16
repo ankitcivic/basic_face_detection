@@ -32,12 +32,8 @@ while True:
     else:
       num_face = faces.shape[0]
 
-
     for (x, y, w, h) in faces:
         cv2.rectangle(frames, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        # font
-
-
         frames = cv2.putText(frames, "Total Number of Face Detected", loc1, font,
                             fontScale, color, thickness, cv2.LINE_AA)
         frames = cv2.putText(frames, str(num_face), loc2, font,
